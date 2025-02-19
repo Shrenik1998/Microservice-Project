@@ -31,7 +31,6 @@ public class AccountsServiceImpl implements IAccountsService {
 
         Accounts accounts = AccountsMapper.mapToAccounts(accountsDTO,new Accounts());
         accounts.setCustomer(optionalCustomer.get());
-        accounts.setCreatedBy("Anonomys");
         accountsRepository.save(accounts);
     }
 
@@ -59,7 +58,6 @@ public class AccountsServiceImpl implements IAccountsService {
 
         accounts.setAccountType(accountsDTO.getAccountType());
         accounts.setBranchAddress(accountsDTO.getBranchAddress());
-        accounts.setUpdatedBy("Anonomys");
         accountsRepository.save(accounts);
     }
 

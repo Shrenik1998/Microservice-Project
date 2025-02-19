@@ -27,8 +27,6 @@ public class CustomerServiceImpl implements ICustomerService {
         if(customerOptional.isPresent()) {
             throw new CustomerAlreadyExists("Customer Already Exists");
         }
-//        customer.setCreatedAt(LocalDateTime.now());
-        customer.setCreatedBy("Anonomys");
         customerRepository.save(customer);
     }
 
@@ -51,8 +49,6 @@ public class CustomerServiceImpl implements ICustomerService {
             throw new ResourceNotFound("Customer not found with id: " + id);
         }
         Customer customer = CustomerMapper.mapToCustomer(customerDTO, optionalCustomer.get());
-//        customer.setUpdatedAt(LocalDateTime.now());
-        customer.setUpdatedBy("Anonomys");
         customerRepository.save(customer);
     }
 
