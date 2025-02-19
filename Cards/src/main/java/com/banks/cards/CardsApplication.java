@@ -1,4 +1,4 @@
-package com.banks.loans;
+package com.banks.cards;
 
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -13,8 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @OpenAPIDefinition(
 		info = @Info(
-				title = "Loans microservice REST API Documentation",
-				description = "Loans microservice REST API Documentation",
+				title = "Cards microservice REST API Documentation",
+				description = "Cards microservice REST API Documentation",
 				version = "v1",
 				contact = @Contact(
 						name = "shrenik halyal",
@@ -27,14 +27,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 				)
 		),
 		externalDocs = @ExternalDocumentation(
-				description =  "Loans microservice REST API Documentation demo docs",
+				description =  "Cards microservice REST API Documentation demo docs",
 				url = "https://www.google.com"
 		)
 )
-public class LoansApplication {
+public class CardsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LoansApplication.class, args);
+		SpringApplication.run(CardsApplication.class, args);
 	}
 
 }

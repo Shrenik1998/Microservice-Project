@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Cards
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/cardsservice
+    username: cardsserviceuser
+    # password: ${PRODUCT_SERVICE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 9000
